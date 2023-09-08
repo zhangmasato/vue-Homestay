@@ -1,28 +1,21 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+    <div class="row">
+      <Banner/>
+    </div>
+    <div>
+      <!-- 指定组件的呈现位置 -->
+      <router-view></router-view> 
+    </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import Banner from './components/Banner'
+// import Room from './components/Banner/Room'
 export default {
   name: 'App',
-  components: {
-    HelloWorld
-  }
+  components:{Banner}
 }
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
