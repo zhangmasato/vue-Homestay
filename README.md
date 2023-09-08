@@ -23,14 +23,5 @@ $ vue create vue-homestay
 $ npm run build
 ~~~
 ### 新建分支gh-pages来部署vue网页在github上，https://zhangmasato.github.io/vue-Homestay/
-### 在项目文件下修改vue.config.js如下，并添加deploy.sh
-~~~bash
-const { defineConfig } = require('@vue/cli-service')
-module.exports = defineConfig({
-  transpileDependencies: true,
-  publicPath: process.env.NODE_ENV === 'production'
-  ? '/vue-Homestay/'
-  : '/'
-})
-~~~
+### 在项目文件下修改vue.config.js如下，并添加deploy.sh，这两个文件详见项目中，运行sh deploy.sh
 
