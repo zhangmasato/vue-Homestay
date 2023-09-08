@@ -17,7 +17,20 @@ $ npm install -g @vue/cli
 ~~~bash
 $ vue create vue-homestay
 ~~~
+## 部署静态网页到github上
 ### 构建Vue.js项目, 这将在项目根目录下创建一个 dist 文件夹，其中包含用于部署的静态文件。
 ~~~bash
 $ npm run build
 ~~~
+### 新建分支gh-pages来部署vue网页在github上，https://zhangmasato.github.io/vue-Homestay/
+### 在项目文件下修改vue.config.js如下，并添加deploy.sh
+~~~bash
+const { defineConfig } = require('@vue/cli-service')
+module.exports = defineConfig({
+  transpileDependencies: true,
+  publicPath: process.env.NODE_ENV === 'production'
+  ? '/vue-Homestay/'
+  : '/'
+})
+~~~
+
