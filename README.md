@@ -17,3 +17,7 @@ $ npm install -g @vue/cli
 ~~~bash
 $ vue create vue-homestay
 ~~~
+### 构建Vue.js项目, 这将在项目根目录下创建一个 dist 文件夹，其中包含用于部署的静态文件。
+~~~bash
+$ npm run build
+~~~
